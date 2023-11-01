@@ -27,10 +27,13 @@ int main() {
             j = copie;
         }
     }
+    j = 1000;
     printf("%d\n%d ",sum,  n - i);
     if (j < 26)
         printf("%c", (char)j + 'A');
-    if (j > 25 && j < 626)
-
+    if (j > 25 && j < 702)
+        printf("%c%c", (char)(j / 26) + 'A' - 1, (char)(j % 26) + 'A');
+    if (j > 701 && j < 1001)
+        printf("%c%c%c", (char)(j / 676) + 'A' - 1, ((char)(j / 26) % 26) + 'A' - 1, (char)(j % 26) + 'A');
     return 0;
 }
