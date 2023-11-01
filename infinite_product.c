@@ -30,10 +30,10 @@ int main() {
         v2[i] = convert_to_base_10(y);
         prod += v1[i] * v2[i];
         norm1 += v1[i] * v1[i];
-        // norm1 = sqrt(norm1);
         norm2 += v2[i] * v2[i];
-        // norm2 = sqrt(norm2);
     }
+    norm1 = sqrt(norm1);
+    norm2 = sqrt(norm2);
     for (int i = 0; i < lung - 1; i++)
         for (int j = i; j < lung; j++) {
             if (v1[i] < v1[j]) {
