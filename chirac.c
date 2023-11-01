@@ -27,14 +27,17 @@ int main() {
         printf("-1");
     else {
         int i = 0;
-        while (final_score > points) {
+        while (final_score > points && i < n) {
             points -= grades[i] * weights[i];
             points += 10 * weights[i];
             contor++;
             i++;
             printf("%d\n", points);
         }
-        printf("%d", contor);
+        if (final_score > points)
+            printf("-1");
+        else
+            printf("%d", contor);
     }
     return 0;
 }
