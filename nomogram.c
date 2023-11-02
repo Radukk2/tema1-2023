@@ -6,28 +6,29 @@ int main() {
     while(games) {
         int n, m;
         scanf("%d%d", &n, &m);
-        int rules[n + m][101], matrix[n][m];
+        int rules[n + m][100], matrix[n][m], v[n + m];
         for (int i = 0; i < n + m; i++) {
-            int x;
-            scanf("%d", &x);
-            rules[i][0] = x;
-            for (int j = 1; j < x; j++)
+            scanf("%d", &v[i]);
+            for (int j = 0; j < v[i]; j++)
                 scanf("%d", &rules[i][j]);
-            for (int j = x; j < 100; j++)
+            for (int j = v[i]; j < 100; j++)
                 rules[i][j] = 0;
         }
         for (int i = 0; i < n; i++)
             for(int j = 0; j < m; j++)
                 scanf("%d", &matrix[i][j]);
         int wrong = 0;
-        for (int i = 0; i < n; i ++) {
-            if (rules[i][0] == 0)
-                for (int j = 0; j < m; j++)
-                    if (rules[i][j] != 0) {
-                        wrong = 1;
-                        break;
-                    }
-        }        
+        for (int i = 0; i < n + m; i++) {
+            printf("%d ",  v[i]);
+            for (int j = 0; j < 100; j++)
+                if(rules[i][j])
+                printf("%d ", rules[i][j]);
+            printf("\n");
+        }
+        if (wrong == 0)
+            printf("Corect\n");
+        else
+            printf("Eroare\n");    
         games--;
     }
     return 0;
