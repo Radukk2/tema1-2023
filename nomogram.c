@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int main() {
+int main(void) {
     int games;
     scanf("%d", &games);
     while(games) {
