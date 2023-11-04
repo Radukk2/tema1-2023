@@ -32,7 +32,6 @@ int main() {
             points += 10 * weights[i];
             contor++;
             i++;
-            printf("%d\n", points);
         }
         if (final_score > points)
             printf("-1");
