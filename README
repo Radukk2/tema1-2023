@@ -1,0 +1,12 @@
+
+Problema 1 - infinite_product
+Am scos transformat fiecare numar dat din baza 8 in baza 10 cu ajutorul unei functii de putere care inmultea restul impartirii la 10 cu 8^0 8^1 s.a.m.d. Am citit toate numerele dintr-un while pentru a nu folosi vecoti am citit la fiecare apelare a functiei un numar. Am facut produsul scalar, am calculat maximul functiei, interschimband maximele intre ele si completandu-l pe al doilea in cazurile in care interschimbarea nu era posibila, dar exista un al doilea maxim. Normele le-am calculat apeland functia de radica "sqrt"
+
+Problema 2 - codeinvim
+Am citit de la tastatura numarul de materii, vectorul de note si vectorul de ponderi. Apoi am sortat cei doi vectori descrescatori dupa crestera pe care o au notele in daca nota ar fi fost 10 (ex: nota este 7 ponderea 5, ar avea o crestere de 15, nota e 6, ponderea e 4, cresterea e 16, ceea ce inseamna ca 6 cu 4 vin inaintea lui 7 cu 5). Fac suma notelor * pondere . In final, iau sirurile sortate, scad produsul nota_i * pondere_i si adun 10 * pondere_i. Daca am ajuns macar la target printez cate materii sunt. Daca nu ajung la un rezultat, printez -1.
+
+Problema 3 - gigel_and_the_checkboard
+Prima oara am citi matricea.Daca suma indicilor este para vom merge pe linii. Altfel mergem pe coloane. Operatia este analoga. Luam o matrice de frecventa. Cand trecem print o casuta modificam variabila de pe pozitia resp in 1 ca sa nu mai putem trece pe acolo. In k se retine numarul de mutari la care am folosit functia car practic intorcea un numar in modul astfel calculand distanta. linia sau coloana am modificat-o cu ajutorul unei functii care returna modulul impartirii elemtului la numarul de linii/coloane.
+
+Problema 4 - nomogram
+Am citit numarul de jocuri. Am bagat numarul de comenzi al fiecarei linii/coloane intr-un vector, si regulile intr-o matrice, iar restul pana la 100 le-am initializat cu 0., apoi am facut o functie foo in care verificam veridicitatea regulilor. Daca nu erau reguli si totusi aveam 1 pe acea linie/coloana returnam "Eroare". Pentru fiecare regula am parcurs linia/coloana pana am ajuns la primul 1. Daca gaseam 1 vedeam cat de mare este "chunck-ul" de 1 si scadeam 1 din rules[ind1][ind2], deci daca regula era corecta rules[ind1][ind2] devine 0. Asadar, am returnat "Eroare", doar daca rules[ind1][ind2], devenea nenul, in rest am returnat "Corect". 
